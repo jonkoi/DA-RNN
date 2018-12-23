@@ -5,7 +5,7 @@
 """
 
 import torch
-torch.set_default_tensor_type('torch.cuda.FloatTensor')
+# torch.set_default_tensor_type('torch.cuda.FloatTensor')
 import argparse
 import numpy as np
 import pandas as pd
