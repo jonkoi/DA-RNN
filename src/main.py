@@ -50,7 +50,7 @@ X, y = read_data(opt.dataroot, debug=False)
 
 # Initialize model
 model = DA_rnn(X, y, opt.ntimestep, opt.nhidden_encoder, opt.nhidden_decoder, opt.batchsize, opt.lr, opt.epochs)
-model.cuda()
+model = model.cuda()
 
 # Train
 model.train()
