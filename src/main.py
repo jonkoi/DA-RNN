@@ -5,6 +5,7 @@
 """
 
 import torch
+torch.set_default_tensor_type('torch.cuda.FloatTensor')
 import argparse
 import numpy as np
 import pandas as pd
@@ -50,7 +51,6 @@ X, y = read_data(opt.dataroot, debug=False)
 
 # Initialize model
 model = DA_rnn(X, y, opt.ntimestep, opt.nhidden_encoder, opt.nhidden_decoder, opt.batchsize, opt.lr, opt.epochs)
-model = model.cuda()
 
 # Train
 model.train()
