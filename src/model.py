@@ -245,6 +245,7 @@ class DA_rnn(nn.Module):
             idx = 0
 
             while (idx < self.train_timesteps):
+                print("Current Index: ", idx)
                 # get the indices of X_train
                 indices = ref_idx[idx:(idx + self.batch_size)]
                 # x = np.zeros((self.T - 1, len(indices), self.input_size))
