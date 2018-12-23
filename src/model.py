@@ -258,6 +258,7 @@ class DA_rnn(nn.Module):
                     y_prev[bs, :] = self.y[indices[bs]:(indices[bs] + self.T - 1)]
 
                 loss = self.train_forward(x, y_prev, y_gt)
+                print(epoch * iter_per_epoch + idx / self.batch_size)
                 self.iter_losses[epoch * iter_per_epoch + idx / self.batch_size] = loss
 
                 idx += self.batch_size
