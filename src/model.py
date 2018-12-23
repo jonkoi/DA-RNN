@@ -12,6 +12,7 @@ from ops import *
 from torch.autograd import Variable
 
 import torch
+torch.set_default_tensor_type('torch.cuda.FloatTensor')
 import numpy as np
 from torch import nn
 from torch import optim
